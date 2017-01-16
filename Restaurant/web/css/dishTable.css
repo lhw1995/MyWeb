@@ -1,0 +1,27 @@
+#dishTable{
+    width: 1000px;
+}
+
+#dishTable tr td{
+    width: 200px;
+}
+#pageTable td{
+    cursor: pointer;
+}
+input[name='search']{
+    float: right;
+    margin-right: 100px;
+    text-align: right;
+}
+#pageTable td{
+    width:80px;
+}
+
+#dishName{
+    font-size: 23px;
+    color: #ff6e19;
+}
+#dishTable ul li{
+    list-style-type: none;
+    float: left;
+}

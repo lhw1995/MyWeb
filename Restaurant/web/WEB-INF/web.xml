@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+
+
+	<servlet>
+        <servlet-name>dispatcherServlet</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/springmvc-servlet.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dispatcherServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.css</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.gif</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/images/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/fonts/*</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.jpg</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+    </servlet-mapping>
+
+    <!--restful支持-->
+    <filter>
+        <filter-name>HiddenHttpMethodFilter</filter-name>
+        <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>HiddenHttpMethodFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>loginFilter</filter-name>
+        <filter-class>com.restaurant.filter.LoginFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>loginFilter</filter-name>
+        <url-pattern>/restaurant/changeInfo</url-pattern>
+        <url-pattern>/restaurant/checkCaptcha</url-pattern>
+        <url-pattern>/restaurant/dishorder</url-pattern>
+        <url-pattern>/restaurant/uploadPreview</url-pattern>
+        <url-pattern>/restaurant/consumerInfo</url-pattern>
+        <url-pattern>/restaurant/order</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>managerFilter</filter-name>
+        <filter-class>com.restaurant.filter.ManagerFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>managerFilter</filter-name>
+        <url-pattern>/restaurant/dishmanage</url-pattern>
+        <url-pattern>/restaurant/dishchange</url-pattern>
+        <url-pattern>/restaurant/dishadd</url-pattern>
+        <url-pattern>/restaurant/order/all</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>managerCantFilter</filter-name>
+        <filter-class>com.restaurant.filter.ManagerCantFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>managerCantFilter</filter-name>
+        <url-pattern>/restaurant/order</url-pattern>
+    </filter-mapping>
+</web-app>

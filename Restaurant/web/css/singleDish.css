@@ -1,0 +1,84 @@
+#leftbox{
+    margin-top:100px;
+    margin-bottom: 100px;
+    float: left;
+}
+#rightbox{
+    float: left;
+}
+#rightbox table{
+    margin-top:200px;
+    margin-left: 100px;
+    font-size: 25px;
+}
+#price{
+    color: #ff6e19;
+}
+#imgList ul li{
+    float: left;
+    list-style-type: none;
+}
+#cart{
+    margin-top:200px;
+    float: right;
+    margin-right: 0px;
+}
+
+#cartDishPrice{
+    color: #ff6e19;
+}
+.cart_price{
+    color: #ff6e19;
+}
+
+#cartImg{
+    margin-top:300px;
+    float: right;
+}
+#deleteCartDish{
+    /*cursor: pointer;*/
+}
+#settle{
+    width: 70px;
+    font-size: 1.1em;
+    background:#ECC30A;
+    padding: 0.4em 0.8em;
+    text-align: center;
+    color: #fff;
+    border: none;
+    outline:none;
+    -webkit-appearance: none;
+}
+
+#allAssess{
+    margin: 0 auto;
+    text-align: center;
+    width: 990px;
+    height: 100px;
+    border: 1px solid #e6e6e6;
+    font-size: 20px;
+}
+#assessCount{
+    background-color: #e6e6e6;
+}
+#assessTable{
+    margin: 0 auto;
+    text-align: center;
+    width: 990px;
+    height: 100px;
+    border: 1px solid #e6e6e6;
+    font-size: 20px;
+}
+#singleScore{
+    padding-left: 100px;
+    text-align: left;
+}
+#assessDate{
+    color: #c8c8c8;
+    font-size: 15px;
+    padding-top: 50px;
+}
+#assessTable ul li{
+    list-style-type: none;
+    float: left;
+}
