@@ -82,9 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </table>
         </div>
     </div>
-    <div id="recmdTable" style="width: 200px;height: 700px;float: left">
-        <table></table>
-    </div>
+
     <div class="clearfix"></div>
 </div>
 <!--footer-->
